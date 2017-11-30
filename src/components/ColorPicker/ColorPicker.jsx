@@ -1,4 +1,4 @@
-import Reac't from 'react';
+import React from 'react';
 import './ColorPicker.css'
 
 const ColorPicker = (props) => {
