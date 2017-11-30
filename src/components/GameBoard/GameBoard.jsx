@@ -1,19 +1,19 @@
 import React from 'react';
-
-import ColorPicker from '../ColorPicker/ColorPicker'
-import GuessRow from '../GuessRow/GuessRow'
-import NewGameButton from '../NewGameButton/NewGameButton'
-import ScoreButton from '../ScoreButton/ScoreButton'
+import GuessRow from '../GuessRow/GuessRow';
+import './GameBoard.css'
 
 const GameBoard = (props) => {
   return (
-    <div>
-      This is the GameBoard
-      <GuessRow />
-      <GuessRow />
-      <ColorPicker />
-      <NewGameButton />
-      <ScoreButton />
+    <div className='GameBoard'>
+      {props.guesses.map((guess, idx) => 
+        <GuessRow
+          guess={guess}
+          colors={props.colors}
+          rowIdx={idx}
+          currentGuess={idx === (props.guesses.length - 1)}
+          key={idx}
+        />
+      )}
     </div>
   );
 }
