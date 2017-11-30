@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .App-header {
@@ -10,12 +12,20 @@
   text-align: center;
 }
 
-.Header-footer {
-  color: darkgrey;
+.App-game {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
 
-.wrapper {
-  background-color: green;
-  flex-direction: column;
-  flex-wrap: nowrap;
+.App-controls {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+
+.Header-footer {
+  color: darkgrey;
 }

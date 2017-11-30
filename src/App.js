@@ -41,7 +41,7 @@ class App extends Component {
   render() {
     let winTries = this.getWinTries();
     return (
-      <div className="wrapper">
+      <div className="App">
         <header className="App-header Header-footer">R E A C T M A S T E R M I N D</header>
         <GameBoard
           guesses={this.state.guesses}
