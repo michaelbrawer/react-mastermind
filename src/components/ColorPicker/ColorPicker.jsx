@@ -1,9 +1,12 @@
-import React from 'react';
+import Reac't from 'react';
+import './ColorPicker.css'
 
 const ColorPicker = (props) => {
   return (
     <div>
-      This is the ColorPicker
+      {props.colors.map((color) =>
+        <button color={color} key={color}>{color}</button> 
+      )}
     </div>
   );
 }
