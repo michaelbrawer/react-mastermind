@@ -158,7 +158,8 @@ class App extends Component {
             />
             <NewGameButton 
              handleNewGameClick={this.handleNewGameClick}
-            />            
+            />
+           {/* <div>{this.state.code}</div> */}
           </div>
         </div>
         <footer style={headFootStyle}>{(winTries ? `You Won in ${winTries} Guesses!` : 'Good Luck!')}</footer>
