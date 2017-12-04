@@ -1,8 +1,5 @@
 .GuessScore {
   display: flex;
-
-  /* below is a shortcut for the above two declarations */
-  /* flex-flow: row nowrap; */
   flex-flow: row wrap;
   align-items: center;
   width: 24px;
