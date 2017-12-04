@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, {Component} from 'react';
 // Must import components used in the JSX
-import GameBoard from './components/GameBoard/GameBoard';
 import ColorPicker from './components/ColorPicker/ColorPicker';
+import GameBoard from './components/GameBoard/GameBoard';
 import NewGameButton from './components/NewGameButton/NewGameButton';
+import './App.css';
 
 let headFootStyle = {
   height: 50,
@@ -22,7 +22,7 @@ class App extends Component {
     this.state = this.getInitialState()
   }
 
-  getInitialState(){
+  getInitialState() {
     return {
       colors,
       code: this.genCode(colors.length),
@@ -30,7 +30,6 @@ class App extends Component {
       guesses: [this.getNewGuess()]
     };
   }
-  
 
   getNewGuess() {
     return {
@@ -58,7 +57,6 @@ class App extends Component {
     this.setState({selColorIdx: colorIdx});
   }
 
-  
   handlePegClick = (pegIdx) => {
     //get copy of state.guesses
     let copyGuesses = [...this.state.guesses]
@@ -84,14 +82,12 @@ class App extends Component {
     });
   }
 
-
   handleNewGameClick = () => {
     this.setState(this.getInitialState());
   }
 
   handleScoreButton = () => {
     let currentGuessIdx = this.state.guesses.length - 1;
-    
         // Computing the score will modify the guessed code and the
         // secret code, therefore create copies of the originals
         let guessCodeCopy = [...this.state.guesses[currentGuessIdx].code];
@@ -132,7 +128,6 @@ class App extends Component {
         this.setState({
           guesses: guessesCopy
         });
-
   }
 
   //lifecycle methods
