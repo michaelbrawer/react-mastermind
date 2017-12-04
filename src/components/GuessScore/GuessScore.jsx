@@ -1,9 +1,8 @@
 import React from 'react';
 import './GuessScore.css';
 
-const GuessScore = ({ score }) => {
-  let scores = ('P'.repeat(score.perfect) + 'A'.repeat(score.almost) +
-    'I'.repeat(4 - score.perfect - score.almost)).split('');
+const GuessScore = ({score}) => {
+  let scores = ('P'.repeat(score.perfect) + 'A'.repeat(score.almost) + 'I'.repeat(4 - score.perfect - score.almost)).split('');
 
   let baseStyle = {
     width: 10,
@@ -30,11 +29,7 @@ const GuessScore = ({ score }) => {
 
   return (
     <div className="GuessScore">
-      {scores.map((score, idx) =>
-        <div key={idx} 
-             style={Object.assign({}, baseStyle, pegStyles[score])}
-        />
-      )}
+      {scores.map((score, idx) => <div key={idx} style={Object.assign({}, baseStyle, pegStyles[score])}/>)}
     </div>
   );
 }
