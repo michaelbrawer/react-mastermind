@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
+import ReactDOM from 'react-dom';
 import './index.css';
 
 Array.prototype.last = function(){
