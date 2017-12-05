@@ -10,19 +10,22 @@ const GuessRow = (props) => {
     <div className="GuessRow">
       <div
         className="GuessRow-Num"
-        style={{color: props.currentGuess ? 'black' : 'lightgrey'}}>
-        {props.rowIdx + 1}
+        style={{color: props.currentGuess ? 'black' : 'lightgrey'}}
+      >
+          {props.rowIdx + 1}
       </div>
-      <GuessPegs 
+      <GuessPegs
+        code={props.guess.code}
+        colors={props.colors}
         currentGuess={props.currentGuess}
         handlePegClick={props.handlePegClick}
-        code={props.guess.code} 
-        colors={props.colors} />
+      />
       {
-        props.currentGuess ?
-          <ScoreButton 
-            handleScoreButton={props.handleScoreButton}
-            code={props.guess.code}/> :
+        props.currentGuess && (props.guess.score.perfect !== 4) ?
+          <ScoreButton
+            handleScoreClick={props.handleScoreClick}
+            disabled={props.guess.code.includes(null)}
+          /> :
           <GuessScore score={props.guess.score} />
       }
     </div>
