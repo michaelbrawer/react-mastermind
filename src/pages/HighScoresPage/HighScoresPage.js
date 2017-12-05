@@ -5,12 +5,13 @@ import './HighScoresPage.css';
 
 const HighScoresPage = (props) => {
 
+  return(
+    <div className='HighScores'>
+      Hi Scores:
+    </div>
+  )
 }
 
-return(
-  <div className='HighScores'>
-    Hi Scores:
-  </div>
-)
+
 
 export default HighScoresPage;

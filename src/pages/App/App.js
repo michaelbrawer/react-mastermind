@@ -7,6 +7,7 @@ import {
 import './App.css';
 import GamePage from '../GamePage/GamePage';
 import SettingsPage from '../SettingsPage/SettingsPage';
+import HighScoresPage from '../HighScoresPage/HighScoresPage';
 
 let colorTable = [
   {name: 'Easy', colors: ['#7CCCE5', '#FDE47F', '#E04644', '#B576AD']},
@@ -172,12 +173,12 @@ class App extends Component {
                   handleNewGame={this.handleNewGameClick}
                 />
               }/>
-            </Switch>
             <Route exact path='/high-scores' render={() => 
               <HighScoresPage
                 scores={this.state.scores}
               />
             }/>
+            </Switch>
         </Router>
         <p>{this.state.code}</p>
         <div>{this.state.scores}</div>
