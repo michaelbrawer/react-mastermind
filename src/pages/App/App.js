@@ -168,6 +168,7 @@ class App extends Component {
               }/>
             </Switch>
         </Router>
+        <p>{this.state.code}</p>
       </div>
     );
   }
