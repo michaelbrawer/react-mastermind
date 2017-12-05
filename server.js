@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 // Put API routes here, before the "catch all" route
-
+app.use('/api', require('./routes/api'));
 
 // The following "catch all" route is necessary for
 // a SPA's client-side routing to properly work
