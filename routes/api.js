@@ -3,3 +3,5 @@ var router = express.Router();
 var scoresCtrl = require('../controllers/scores');
 
 router.get('/highscores', scoresCtrl.getAllScores);
+
+module.exports = router;
