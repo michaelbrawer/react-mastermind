@@ -5,6 +5,9 @@ var logger = require('morgan');
 var dotenv = require('dotenv');
 var mongoose = require('mongoose');
 var bodyparser = require('body-parser');
+require('dotenv').config();
+
+require('./config/database');
 
 var app = express();
 
