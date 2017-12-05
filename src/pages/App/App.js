@@ -137,6 +137,12 @@ class App extends Component {
     }));
   }
 
+  /*Lifecycle Methods*/
+  componentDidMount(){
+   
+ 
+  }
+
   render() {
     return (
       <div>
@@ -167,8 +173,15 @@ class App extends Component {
                 />
               }/>
             </Switch>
+            <Route exact path='/high-scores' render={() => 
+              <HighScoresPage
+                scores={this.state.scores}
+              />
+            }/>
         </Router>
         <p>{this.state.code}</p>
+        <div>{this.state.scores}</div>
+        
       </div>
     );
   }
