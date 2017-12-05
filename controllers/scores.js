@@ -1,4 +1,4 @@
-var Score = require('../models/scores');
+var Score = require('../models/score');
 
 module.exports = {
   getAllScores
