@@ -1,7 +1,10 @@
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
-var logger = require('morgan')
+var logger = require('morgan');
+var dotenv = require('dotenv');
+var mongoose = require('mongoose');
+var bodyparser = require('body-parser');
 
 var app = express();
 
