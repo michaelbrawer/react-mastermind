@@ -148,7 +148,6 @@ class App extends Component {
     return (
       <div>
         <header className='header-footer'>R E A C T &nbsp;&nbsp; M A S T E R M I N D</header>
-        <Router>
             <Switch>
               <Route exact path='/' render={() =>
                 <GamePage
@@ -179,7 +178,6 @@ class App extends Component {
               />
             }/>
             </Switch>
-        </Router>
         <p>{this.state.code}</p>
         <div>{this.state.scores}</div>
         

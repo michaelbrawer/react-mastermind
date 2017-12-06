@@ -8,6 +8,10 @@ Array.prototype.last = function(){
 }
 
 ReactDOM.render(
-  <App />,
+  <Router>
+  <Route render={(props) => 
+  <App{...props} />}
+  />
+  </Router>,
   document.getElementById('root')
 );
