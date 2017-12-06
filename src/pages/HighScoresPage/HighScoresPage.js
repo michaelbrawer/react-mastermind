@@ -7,7 +7,7 @@ const HighScoresPage = (props) => {
 
   return(
     <div className='HighScores'>
-      Hi Scores:
+      <p>Hi Scores:</p>
     </div>
   )
 }
