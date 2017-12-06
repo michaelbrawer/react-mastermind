@@ -9,8 +9,9 @@ Array.prototype.last = function(){
 
 ReactDOM.render(
   <Router>
-  <Route render={(props) => 
-  <App{...props} />}
+    <Route render={(props) => 
+      <App{...props} />
+    }
   />
   </Router>,
   document.getElementById('root')
