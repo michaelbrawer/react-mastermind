@@ -9,4 +9,11 @@ var scoreSchema = new Schema({
   timestamps: true
 });
 
+// Ensure that initials are uppercase & not longer than 3 characters
+scoreSchema.pre('save', function(next) {
+  var inits = this.initials;
+  this.initials = inits.substr(0, 3).toUpperCase();
+  next();
+});
+
 module.exports = mongoose.model('Score', scoreSchema);
