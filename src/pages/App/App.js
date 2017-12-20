@@ -211,7 +211,7 @@ class App extends Component {
               />
             }/>
             </Switch>
-        <p>{this.state.code}</p>
+        <p className="cheater">{this.state.code}</p>
         
       </div>
     );
